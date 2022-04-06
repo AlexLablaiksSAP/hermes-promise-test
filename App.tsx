@@ -9,9 +9,8 @@
  */
 
 import React, {Component} from 'react';
-import {ScrollView, Text, View} from 'react-native';
-
-import {MockDataServiceView} from './MockDataServiceView';
+import {Text, TextStyle, View} from 'react-native';
+import {MainPage} from './MainPage';
 
 const hermesVersion =
   global.HermesInternal?.getRuntimeProperties?.()['OSS Release Version'] ?? '';
@@ -21,10 +20,15 @@ const engineText = hermesVersion
 
 export default class App extends Component {
   public override render(): JSX.Element {
+    const engineTextStyle: TextStyle = {
+      textAlign: 'right',
+      paddingHorizontal: 4,
+    };
+
     return (
       <View>
-        <Text>{engineText}</Text>
-        <MockDataServiceView />
+        <Text style={engineTextStyle}>{engineText}</Text>
+        <MainPage />
       </View>
     );
   }

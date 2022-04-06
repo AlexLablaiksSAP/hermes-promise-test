@@ -1,4 +1,4 @@
-export interface IObjectCell extends Object {
+export interface IObjectCell extends Record<string, string> {
   _id: string;
   Title: string;
   Subhead: string;
