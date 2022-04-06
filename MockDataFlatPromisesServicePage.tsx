@@ -1,5 +1,13 @@
 import React, {Component, PureComponent} from 'react';
-import {Button, FlatList, Text, TextStyle, View, ViewStyle} from 'react-native';
+import {
+  Alert,
+  Button,
+  FlatList,
+  Text,
+  TextStyle,
+  View,
+  ViewStyle,
+} from 'react-native';
 import {ObjectCellView} from './ObjectCellView';
 
 import {IObjectCell} from './IObjectCell';
@@ -50,6 +58,11 @@ export class MockDataFlatPromisesServicePage extends Component<Props, State> {
         `formatted ${this.objectCells.length} object cells in ${durationMs} ms`,
       );
 
+      Alert.alert(
+        'Measured Time',
+        `formatted ${this.objectCells.length} object cells in ${durationMs} ms`,
+      );
+
       this.setState({data: this.objectCells});
     });
   }
@@ -65,6 +78,7 @@ export class MockDataFlatPromisesServicePage extends Component<Props, State> {
     console.log(
       `populated ${this.objectCells.length} object cells in ${durationMs} ms`,
     );
+
     this.setState({data: this.objectCells});
   }
 

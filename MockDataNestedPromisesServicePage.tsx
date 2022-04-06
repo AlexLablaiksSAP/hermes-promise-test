@@ -1,5 +1,13 @@
 import React, {Component, PureComponent} from 'react';
-import {Button, FlatList, Text, TextStyle, View, ViewStyle} from 'react-native';
+import {
+  Alert,
+  Button,
+  FlatList,
+  Text,
+  TextStyle,
+  View,
+  ViewStyle,
+} from 'react-native';
 
 import {ObjectCellView} from './ObjectCellView';
 
@@ -84,6 +92,11 @@ export class MockDataNestedPromisesServicePage extends Component<Props, State> {
       const end = new Date();
       const durationMs = end.getTime() - start.getTime();
       console.log(
+        `formatted ${objectCells.length} object cells in ${durationMs} ms`,
+      );
+
+      Alert.alert(
+        'Measured Time',
         `formatted ${objectCells.length} object cells in ${durationMs} ms`,
       );
 
