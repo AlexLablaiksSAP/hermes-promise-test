@@ -93,11 +93,11 @@ export class MockDataFlatPromisesServicePage extends Component<Props, State> {
           }}
         />
         <Button
-          title="Get 1K Object Cells and Format"
+          title="Get 1K Object Cells"
           onPress={() => this.onGet1kObjectCells()}
         />
         <Button
-          title="Get 10K Object Cells and Format"
+          title="Get 10K Object Cells"
           onPress={() => this.onGet10kObjectCells()}
         />
         <Button title="Format" onPress={() => this.onFormat()} />
