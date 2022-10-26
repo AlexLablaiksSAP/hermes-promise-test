@@ -7,11 +7,11 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="6bed2239-ed2e-4c85-8b75-6b92da84bbe4"
+    Name="437d5c4a-c252-4bf1-adac-9a61b8b7edee"
     Publisher="CN=I834126"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="6bed2239-ed2e-4c85-8b75-6b92da84bbe4" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="437d5c4a-c252-4bf1-adac-9a61b8b7edee" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>hermespromisetest</DisplayName>

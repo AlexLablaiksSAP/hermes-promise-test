@@ -22,9 +22,9 @@
       },
       "ReactNative.Hermes.Windows": {
         "type": "Direct",
-        "requested": "[0.11.0-ms.4, )",
-        "resolved": "0.11.0-ms.4",
-        "contentHash": "YjcQNocXm3yV6xW9luBgaeaF80G0+PBRxTYeB4H4hVvgO6FKd3ErtqVBhwyJEvBk12hHoeszuxnK86pIQQEhfw=="
+        "requested": "[0.70.1, )",
+        "resolved": "0.70.1",
+        "contentHash": "WELc7/h0us303fPqu5Qt9xSbXtQApZ7t+43NFp4TZNoXSKtG69vgOwms66xHD8w7NztAXhA9hUVbr0ksWW8vzw=="
       },
       "Microsoft.Net.Native.Compiler": {
         "type": "Transitive",
