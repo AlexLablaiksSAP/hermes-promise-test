@@ -1,13 +1,5 @@
-import React, {Component, PureComponent} from 'react';
-import {
-  Alert,
-  Button,
-  FlatList,
-  Text,
-  TextStyle,
-  View,
-  ViewStyle,
-} from 'react-native';
+import React, {Component} from 'react';
+import {Alert, Button, FlatList, Text, TextStyle, View} from 'react-native';
 
 import {ObjectCellView} from './ObjectCellView';
 
