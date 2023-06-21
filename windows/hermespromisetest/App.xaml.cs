@@ -5,7 +5,7 @@ using Windows.UI.Xaml.Controls;
 
 namespace hermespromisetest
 {
-	sealed partial class App : ReactApplication
+	public sealed partial class App : ReactApplication
 	{
 		public App()
 		{
@@ -18,7 +18,6 @@ namespace hermespromisetest
 			JavaScriptBundleFile = "index";
 			InstanceSettings.UseDirectDebugger = true;
 			InstanceSettings.UseFastRefresh = true;
-			InstanceSettings.RequestInlineSourceMap = false;
 #endif
 
 #if DEBUG
