@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Alert, Button, FlatList, Text, TextStyle, View } from 'react-native';
 
-import { type IObjectCell } from './IObjectCell';
+import { type IObjectCell } from './hermes-promise-cli/src/IObjectCell';
+import { MockDataNestedPromisesService } from './hermes-promise-cli/src/MockDataNestedPromisesService';
 import { ObjectCellView } from './ObjectCellView';
-import { MockDataNestedPromisesService } from './MockDataNestedPromisesService';
 
 interface Props {
 	onGoBack?: () => void;

@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { Text, View, ViewStyle } from 'react-native';
 
-import { IObjectCell } from './IObjectCell';
+import { IObjectCell } from './hermes-promise-cli/src/IObjectCell';
 
 export interface IObjectCellViewProps {
 	item: IObjectCell;
