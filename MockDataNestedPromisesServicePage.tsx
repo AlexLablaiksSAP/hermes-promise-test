@@ -4,7 +4,6 @@ import { Alert, Button, FlatList, Text, TextStyle, View } from 'react-native';
 import { type IObjectCell } from './IObjectCell';
 import { ObjectCellView } from './ObjectCellView';
 import { MockDataNestedPromisesService } from './MockDataNestedPromisesService';
-import { MockDataFlatPromisesService } from './MockDataFlatPromisesService';
 
 interface Props {
 	onGoBack?: () => void;
@@ -19,8 +18,13 @@ function onReport(msg: string): void {
 }
 
 export class MockDataNestedPromisesServicePage extends Component<Props, State> {
-	state: State = { objectCellIter: 0 };
 	private _mockDataNestedPromisesService = new MockDataNestedPromisesService(onReport);
+
+	constructor(props: Props) {
+		super(props);
+
+		this.state = { objectCellIter: 0 };
+	}
 
 	private onGet1kObjectCells(): void {
 		this._mockDataNestedPromisesService.populate1kObjectCells();
@@ -32,7 +36,8 @@ export class MockDataNestedPromisesServicePage extends Component<Props, State> {
 
 	private onFormat(): void {
 		this._mockDataNestedPromisesService.format().then(() => {
-			this.setState({ objectCellIter: this.state.objectCellIter++ });
+			let iter = this.state.objectCellIter;
+			this.setState({ objectCellIter: ++iter });
 		});
 	}
 
@@ -51,15 +56,15 @@ export class MockDataNestedPromisesServicePage extends Component<Props, State> {
 				<Text style={titleStyle}>Mock Data with Nested Promises</Text>
 				<Button
 					disabled={!(this.props.onGoBack instanceof Function)}
-					title="Main Screen"
+					title='Main Screen'
 					onPress={() => {
 						this.props.onGoBack?.();
 					}}
 				/>
-				<Button title="Get 1K Object Cells" onPress={() => this.onGet1kObjectCells()} />
-				<Button title="Get 10K Object Cells" onPress={() => this.onGet10kObjectCells()} />
-				<Button title="Format" onPress={() => this.onFormat()} />
-				<Button title="Format2" onPress={() => this.onFormat2()} />
+				<Button title='Get 1K Object Cells' onPress={() => this.onGet1kObjectCells()} />
+				<Button title='Get 10K Object Cells' onPress={() => this.onGet10kObjectCells()} />
+				<Button title='Format' onPress={() => this.onFormat()} />
+				<Button title='Format2' onPress={() => this.onFormat2()} />
 				<FlatList
 					data={this._mockDataNestedPromisesService.objectCells}
 					renderItem={ObjectCellView.renderItem}

@@ -17,10 +17,10 @@ export class MockDataFlatPromisesService extends MockDataPromisesService {
 		for (const objectCell of this.objectCells) {
 			for (const key of Object.keys(objectCell)) {
 				promiseArray.push(
-					new Promise(resolve => {
+					new Promise((resolve) => {
 						this.fieldValueToUpper(objectCell, key);
 						resolve();
-					}),
+					})
 				);
 			}
 		}

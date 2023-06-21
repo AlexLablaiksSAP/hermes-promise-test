@@ -5,7 +5,7 @@ import { getObjectCells as get10kObjectCells } from './MockDataServiceObjectCell
 export type Reporter = (msg: string) => void;
 
 export abstract class MockDataPromisesService {
-	protected toUpper: boolean = true;
+	protected toUpper = true;
 	private _objectCells: IObjectCell[] = [];
 
 	constructor(protected reporter?: Reporter) {}

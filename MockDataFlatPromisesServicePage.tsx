@@ -18,12 +18,18 @@ function onReport(msg: string): void {
 }
 
 export class MockDataFlatPromisesServicePage extends Component<Props, State> {
-	state: State = { objectCellIter: 0 };
 	private _mockDataFlatPromisesService: MockDataFlatPromisesService = new MockDataFlatPromisesService(onReport);
+
+	constructor(props: Props) {
+		super(props);
+
+		this.state = { objectCellIter: 0 };
+	}
 
 	private onFormat(): void {
 		this._mockDataFlatPromisesService.format().then(() => {
-			this.setState({ objectCellIter: this.state.objectCellIter++ });
+			let iter = this.state.objectCellIter;
+			this.setState({ objectCellIter: ++iter });
 		});
 	}
 
@@ -46,14 +52,14 @@ export class MockDataFlatPromisesServicePage extends Component<Props, State> {
 				<Text style={titleStyle}>Mock Data with Flat Promises</Text>
 				<Button
 					disabled={!(this.props.onGoBack instanceof Function)}
-					title="Main Screen"
+					title='Main Screen'
 					onPress={() => {
 						if (this.props.onGoBack) this.props.onGoBack();
 					}}
 				/>
-				<Button title="Get 1K Object Cells" onPress={() => this.onGet1kObjectCells()} />
-				<Button title="Get 10K Object Cells" onPress={() => this.onGet10kObjectCells()} />
-				<Button title="Format" onPress={() => this.onFormat()} />
+				<Button title='Get 1K Object Cells' onPress={() => this.onGet1kObjectCells()} />
+				<Button title='Get 10K Object Cells' onPress={() => this.onGet10kObjectCells()} />
+				<Button title='Format' onPress={() => this.onFormat()} />
 				<FlatList
 					data={this._mockDataFlatPromisesService.objectCells}
 					renderItem={ObjectCellView.renderItem}
