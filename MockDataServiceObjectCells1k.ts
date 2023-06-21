@@ -993,7 +993,7 @@ export function getObjectCells(): Array<IObjectCell> {
 			Description:
 				'preston observer childrens yukon boss navigate image successfully definitions issued construct eagles too fancy wt to fill ho ways medication',
 			Status: 'Dominica',
-			Substatus: 'Bo\'ness',
+			Substatus: "Bo'ness",
 		},
 		{
 			_id: 'P2O3LG0PNQNF53UI',
@@ -6243,7 +6243,7 @@ export function getObjectCells(): Array<IObjectCell> {
 			Description:
 				'line config catalogue heated moment missile beastality motivated belly indiana aluminium alien contracts recruitment charms fetish unexpected adults units dev',
 			Status: 'Mauritania',
-			Substatus: 'King\'s Lynn',
+			Substatus: "King's Lynn",
 		},
 		{
 			_id: 'UXF6KM4QXHT2N8VS',
@@ -6583,7 +6583,7 @@ export function getObjectCells(): Array<IObjectCell> {
 			Description:
 				'gregory dis paperbacks enormous triumph fine mold toll consciousness corrected brake cents fitness nottingham syndication eat lb winning cost skype',
 			Status: 'Turkey',
-			Substatus: 'Connah\'s Quay',
+			Substatus: "Connah's Quay",
 		},
 		{
 			_id: 'F8RRDYYHD6OJKVLG',
@@ -8033,7 +8033,7 @@ export function getObjectCells(): Array<IObjectCell> {
 			Description:
 				'infectious advancement honor matching positions powered international dt mere cities initially macintosh remain comparison departmental frank locks camp less volkswagen',
 			Status: 'Switzerland',
-			Substatus: 'Bo\'ness',
+			Substatus: "Bo'ness",
 		},
 		{
 			_id: '9Q09LQREY9CAXQ68',
@@ -10003,7 +10003,7 @@ export function getObjectCells(): Array<IObjectCell> {
 			Description:
 				'mayor proudly details voltage staffing characteristics signing thou bookstore relax conversation card graduate an aaron map deny min tc passion',
 			Status: 'Lebanon',
-			Substatus: 'Bishop\'s Castle',
+			Substatus: "Bishop's Castle",
 		},
 		{
 			_id: '76PXA14L10JNIVYX',
