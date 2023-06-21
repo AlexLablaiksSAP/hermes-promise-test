@@ -4,7 +4,6 @@ import { Alert, Button, FlatList, Text, TextStyle, View } from 'react-native';
 import { type IObjectCell } from './IObjectCell';
 import { ObjectCellView } from './ObjectCellView';
 import { MockDataNestedPromisesService } from './MockDataNestedPromisesService';
-import { MockDataFlatPromisesService } from './MockDataFlatPromisesService';
 
 interface Props {
 	onGoBack?: () => void;
@@ -19,8 +18,13 @@ function onReport(msg: string): void {
 }
 
 export class MockDataNestedPromisesServicePage extends Component<Props, State> {
-	state: State = { objectCellIter: 0 };
 	private _mockDataNestedPromisesService = new MockDataNestedPromisesService(onReport);
+
+	constructor(props: Props) {
+		super(props);
+
+		this.state = { objectCellIter: 0 };
+	}
 
 	private onGet1kObjectCells(): void {
 		this._mockDataNestedPromisesService.populate1kObjectCells();
@@ -32,7 +36,8 @@ export class MockDataNestedPromisesServicePage extends Component<Props, State> {
 
 	private onFormat(): void {
 		this._mockDataNestedPromisesService.format().then(() => {
-			this.setState({ objectCellIter: this.state.objectCellIter++ });
+			let iter = this.state.objectCellIter;
+			this.setState({ objectCellIter: ++iter });
 		});
 	}
 

@@ -15,21 +15,21 @@ import {MainPage} from './MainPage';
 const hermesVersion =
   global.HermesInternal?.getRuntimeProperties?.()['OSS Release Version'] ?? '';
 const engineText = hermesVersion
-  ? `Engine: Hermes ${hermesVersion}`
-  : 'Engine: Chakra';
+	? `Engine: Hermes ${hermesVersion}`
+	: 'Engine: Chakra';
 
 export default class App extends Component {
-  public override render(): JSX.Element {
-    const engineTextStyle: TextStyle = {
-      textAlign: 'right',
-      paddingHorizontal: 4,
-    };
+	public override render(): JSX.Element {
+		const engineTextStyle: TextStyle = {
+			textAlign: 'right',
+			paddingHorizontal: 4,
+		};
 
-    return (
-      <View>
-        <Text style={engineTextStyle}>{engineText}</Text>
-        <MainPage />
-      </View>
-    );
-  }
+		return (
+			<View>
+				<Text style={engineTextStyle}>{engineText}</Text>
+				<MainPage />
+			</View>
+		);
+	}
 }

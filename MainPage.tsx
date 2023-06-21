@@ -8,7 +8,7 @@ interface IMainPageState {
 	page?: JSX.Element;
 }
 
-export class MainPage extends Component<{}, IMainPageState> {
+export class MainPage extends Component<Record<string, never>, IMainPageState> {
 	public override render(): JSX.Element {
 		if (this.state?.page) {
 			return this.state.page;
@@ -17,7 +17,7 @@ export class MainPage extends Component<{}, IMainPageState> {
 		return (
 			<View>
 				<Button
-					title="Mock Data with Nested Promises"
+					title='Mock Data with Nested Promises'
 					onPress={() =>
 						this.setState({
 							page: <MockDataNestedPromisesServicePage onGoBack={() => this.setState({ page: undefined })} />,
@@ -25,7 +25,7 @@ export class MainPage extends Component<{}, IMainPageState> {
 					}
 				/>
 				<Button
-					title="Mock Data with Flat Promises"
+					title='Mock Data with Flat Promises'
 					onPress={() =>
 						this.setState({
 							page: <MockDataFlatPromisesServicePage onGoBack={() => this.setState({ page: undefined })} />,

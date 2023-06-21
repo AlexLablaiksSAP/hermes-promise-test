@@ -18,12 +18,18 @@ function onReport(msg: string): void {
 }
 
 export class MockDataFlatPromisesServicePage extends Component<Props, State> {
-	state: State = { objectCellIter: 0 };
 	private _mockDataFlatPromisesService: MockDataFlatPromisesService = new MockDataFlatPromisesService(onReport);
+
+	constructor(props: Props) {
+		super(props);
+
+		this.state = { objectCellIter: 0 };
+	}
 
 	private onFormat(): void {
 		this._mockDataFlatPromisesService.format().then(() => {
-			this.setState({ objectCellIter: this.state.objectCellIter++ });
+			let iter = this.state.objectCellIter;
+			this.setState({ objectCellIter: ++iter });
 		});
 	}
 
