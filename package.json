@@ -46,7 +46,6 @@
 		"prettier-eslint": "^13.0.0",
 		"react-test-renderer": "18.2.0",
 		"typescript": "^4.9.5"
-							 
 	},
   "jest": {
     "preset": "react-native",

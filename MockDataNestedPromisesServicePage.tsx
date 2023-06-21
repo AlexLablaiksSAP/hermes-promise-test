@@ -4,6 +4,7 @@ import { Alert, Button, FlatList, Text, TextStyle, View } from 'react-native';
 import { type IObjectCell } from './IObjectCell';
 import { ObjectCellView } from './ObjectCellView';
 import { MockDataNestedPromisesService } from './MockDataNestedPromisesService';
+import { MockDataFlatPromisesService } from './MockDataFlatPromisesService';
 
 interface Props {
 	onGoBack?: () => void;
@@ -35,6 +36,10 @@ export class MockDataNestedPromisesServicePage extends Component<Props, State> {
 		});
 	}
 
+	private onFormat2(): void {
+		eval('console.log("hello from eval");');
+	}
+
 	public override render(): JSX.Element {
 		const titleStyle: TextStyle = {
 			textAlign: 'center',
@@ -48,12 +53,13 @@ export class MockDataNestedPromisesServicePage extends Component<Props, State> {
 					disabled={!(this.props.onGoBack instanceof Function)}
 					title="Main Screen"
 					onPress={() => {
-						if (this.props.onGoBack) this.props.onGoBack();
+						this.props.onGoBack?.();
 					}}
 				/>
 				<Button title="Get 1K Object Cells" onPress={() => this.onGet1kObjectCells()} />
 				<Button title="Get 10K Object Cells" onPress={() => this.onGet10kObjectCells()} />
 				<Button title="Format" onPress={() => this.onFormat()} />
+				<Button title="Format2" onPress={() => this.onFormat2()} />
 				<FlatList
 					data={this._mockDataNestedPromisesService.objectCells}
 					renderItem={ObjectCellView.renderItem}
