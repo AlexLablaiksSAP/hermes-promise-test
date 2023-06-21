@@ -1,0 +1,3 @@
+[submodule "hermes-promise-cli"]
+	path = hermes-promise-cli
+	url = https://github.com/AlexLablaiksSAP/hermes-promise-cli.git
