@@ -8,15 +8,12 @@
  * @format
  */
 
-import React, {Component} from 'react';
-import {Text, TextStyle, View} from 'react-native';
-import {MainPage} from './MainPage';
+import React, { Component } from 'react';
+import { Text, TextStyle, View } from 'react-native';
+import { MainPage } from './MainPage';
 
-const hermesVersion =
-  global.HermesInternal?.getRuntimeProperties?.()['OSS Release Version'] ?? '';
-const engineText = hermesVersion
-	? `Engine: Hermes ${hermesVersion}`
-	: 'Engine: Chakra';
+const hermesVersion = global.HermesInternal?.getRuntimeProperties?.()['OSS Release Version'] ?? '';
+const engineText = hermesVersion ? `Engine: Hermes ${hermesVersion}` : 'Engine: Chakra';
 
 export default class App extends Component {
 	public override render(): JSX.Element {

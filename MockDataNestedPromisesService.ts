@@ -3,7 +3,7 @@ import { MockDataPromisesService } from './MockDataPromisesService';
 
 export class MockDataNestedPromisesService extends MockDataPromisesService {
 	private formatKeyValue(key: string, value: string): Promise<[string, string]> {
-		return new Promise(resolve => {
+		return new Promise((resolve) => {
 			const resolvedValue = this.toUpper ? value.toUpperCase() : value.toLowerCase();
 			resolve([key, resolvedValue]);
 		});
@@ -16,7 +16,7 @@ export class MockDataNestedPromisesService extends MockDataPromisesService {
 			fieldPromises.push(this.formatKeyValue(key, objectCell[key]));
 		}
 
-		return new Promise(resolve => {
+		return new Promise((resolve) => {
 			Promise.all(fieldPromises).then((tuples: [string, string][]) => {
 				const resolvedObjectCell: Record<string, string> = {};
 				for (const tuple of tuples) {
