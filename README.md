@@ -4,7 +4,7 @@ Primarily used to demonstrate the performance of Hermes vs the other React Nativ
 
 ## Description
 
-There are observable differences between the Hermes and Chakra JavaScript engines when a large amount of promises are processed. This was originally tracked against [microsoft/hermes-windows issue #92](https://github.com/microsoft/hermes-windows/issues/92). However, the latest confirguations in this library suggest that the issue also persists on Android as well. This project was overhauled to test with Hermes directly for [facebook/hermes issue #1024](https://github.com/facebook/hermes/issues/1024)
+There are observable differences between the Hermes and Chakra JavaScript engines when a large amount of promises are processed. This was originally tracked against [microsoft/hermes-windows issue #92](https://github.com/microsoft/hermes-windows/issues/92). However, the latest configurations in this library suggest that the issue also persists on Android as well. This project was overhauled to test with Hermes directly for [facebook/hermes issue #1024](https://github.com/facebook/hermes/issues/1024)
 
 An application may want to format / sanitize individual fields on data returned from a back-end; such as a Date Time format, capitalization, etc. Likely, this would be done with asynchronous or promise based functions running. This example project seeks to demonstrate that behavior for large data sets of 1,000 and 10,000.
 
@@ -46,3 +46,9 @@ Assuming the prerequisites have been fulfilled, using standard React Native comm
 
 > **Note**
 > Switching between Hermes and Chakra is possible by toggling the `UseHermes` field in `windows/ExperimentalFeatures.props`; as noted at [Using Hermes in an existing project](https://microsoft.github.io/react-native-windows/docs/hermes#using-hermes-in-an-existing-project).
+
+## Usage
+1. First select which promise structure to test. Nested Promises consists of multiple promise layers when formatting the fields of each object retrieved, while Flat Promises consists of one promise per field of every object. See the submodule repository code for details.
+![image](https://github.com/AlexLablaiksSAP/hermes-promise-test/assets/12348315/b17802f0-1646-4dc6-8df6-ba8dd2700105)
+2. On the following screen, first choose an object size to simulate fetching. Note, the console will report the time the fetch took, though this is not the purpose of the test.
+3. Click on Format, which will then launch a promise chain which changes the casing for every field of every object. The metro bundler will have console entries for the times and a pop up will display for Release mode.
