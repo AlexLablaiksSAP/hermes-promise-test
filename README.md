@@ -1,6 +1,6 @@
 # Hermes Promise Testing (within React Native)
 
-Primarily used to demonstrate the performance of Hermes vs the other React Native engines, such as Chakra & JavaScriptCore (Windows and Android/iOS, respectively).
+Primarily used to demonstrate the performance of Hermes vs the other React Native JavaScript engines, such as Chakra & JavaScriptCore (Windows and Android/iOS, respectively).
 
 ## Description
 
