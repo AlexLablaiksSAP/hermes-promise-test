@@ -49,6 +49,6 @@ Assuming the prerequisites have been fulfilled, using standard React Native comm
 
 ## Usage
 1. First select which promise structure to test. Nested Promises consists of multiple promise layers when formatting the fields of each object retrieved, while Flat Promises consists of one promise per field of every object. See the submodule repository code for details.
-![image](https://github.com/AlexLablaiksSAP/hermes-promise-test/assets/12348315/b17802f0-1646-4dc6-8df6-ba8dd2700105)
-2. On the following screen, first choose an object size to simulate fetching. Note, the console will report the time the fetch took, though this is not the purpose of the test.
-3. Click on Format, which will then launch a promise chain which changes the casing for every field of every object. The metro bundler will have console entries for the times and a pop up will display for Release mode.
+   ![image](https://github.com/AlexLablaiksSAP/hermes-promise-test/assets/12348315/b17802f0-1646-4dc6-8df6-ba8dd2700105)
+3. On the following screen, first choose an object size to simulate fetching. Note, the console will report the time the fetch took, though this is not the purpose of the test.
+4. Click on Format, which will then launch a promise chain which changes the casing for every field of every object. The metro bundler will have console entries for the times and a pop up will display for Release mode.
