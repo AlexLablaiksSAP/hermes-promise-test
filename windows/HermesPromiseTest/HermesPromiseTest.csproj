@@ -6,7 +6,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{F3F8038B-E150-42FE-8135-CCC322C22E4F}</ProjectGuid>
+    <ProjectGuid>{0250E18C-441A-43C7-96CB-243ECAA82557}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>HermesPromiseTest</RootNamespace>

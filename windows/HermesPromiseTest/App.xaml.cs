@@ -5,7 +5,7 @@ using Windows.UI.Xaml.Controls;
 
 namespace HermesPromiseTest
 {
-	public sealed partial class App : ReactApplication
+	sealed partial class App : ReactApplication
 	{
 		public App()
 		{
