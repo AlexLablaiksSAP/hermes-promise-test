@@ -1,6 +1,6 @@
 using Microsoft.ReactNative;
 
-namespace hermespromisetest
+namespace HermesPromiseTest
 {
     public partial class ReactPackageProvider : IReactPackageProvider
     {

@@ -3,7 +3,7 @@ using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
-namespace hermespromisetest
+namespace HermesPromiseTest
 {
 	public sealed partial class App : ReactApplication
 	{
