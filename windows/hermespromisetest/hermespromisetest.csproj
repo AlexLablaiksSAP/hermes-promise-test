@@ -9,8 +9,8 @@
     <ProjectGuid>{F3F8038B-E150-42FE-8135-CCC322C22E4F}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>hermespromisetest</RootNamespace>
-    <AssemblyName>hermespromisetest</AssemblyName>
+    <RootNamespace>HermesPromiseTest</RootNamespace>
+    <AssemblyName>HermesPromiseTest</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <MinimumVisualStudioVersion>17.0</MinimumVisualStudioVersion>
