@@ -8,7 +8,7 @@
  * @format
  */
 
-import React, { Component } from 'react';
+import React, { Component, JSX } from 'react';
 import { Text, TextStyle, View, Platform } from 'react-native';
 import { MainPage } from './MainPage';
 
