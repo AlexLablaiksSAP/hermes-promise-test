@@ -6,6 +6,7 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "lint": "eslint .",
+    "postinstall": "node ./patch-metro-prelude.js",
     "start": "react-native start",
     "test": "jest",
     "windows": "npx @react-native-community/cli run-windows"
