@@ -19,14 +19,14 @@ This repository contains a git submodule to [hermes-promise-cli](https://github.
 
 #### Android / iOS Client
 
-- Perform the necessary configuration steps outlined at React Native's [Setting up the development environment (Version 0.71)](https://reactnative.dev/docs/0.71/environment-setup).
+- Perform the necessary configuration steps outlined at React Native's [Setting up the development environment (Version 0.81)](https://reactnative.dev/docs/0.81/environment-setup).
 
 > **Warning**
 > iOS has not been tested (but should work)
 
 #### Windows Client
 
-- Perform the necessary configuration steps outlined at React Native for Windows' [Get Started with Windows](https://microsoft.github.io/react-native-windows/docs/getting-started) for 0.71.
+- Perform the necessary configuration steps outlined at React Native for Windows' [Get Started with Windows](https://microsoft.github.io/react-native-windows/docs/getting-started) for 0.81.
 
 ## Building & Running
 

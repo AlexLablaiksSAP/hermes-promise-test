@@ -7,4 +7,13 @@ module.exports = {
 		quotes: ['error', 'single', { avoidEscape: true }],
 		semi: ['error', 'always'],
 	},
+	ignorePatterns: [
+		'node_modules/',
+		'android/',
+		'ios/',
+		'windows/',
+		'metro.config.js',
+		'jest.config.js',
+		'hermes-promise-cli/',
+	],
 };

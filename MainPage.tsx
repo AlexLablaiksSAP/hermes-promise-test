@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { type JSX, Component } from 'react';
 import { View, Button } from 'react-native';
 
 import { MockDataNestedPromisesServicePage } from './MockDataNestedPromisesServicePage';

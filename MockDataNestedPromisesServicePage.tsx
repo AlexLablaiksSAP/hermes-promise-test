@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { type JSX, Component } from 'react';
 import { Alert, Button, FlatList, Text, TextStyle, View } from 'react-native';
 
 import { type IObjectCell } from './hermes-promise-cli/src/IObjectCell';
@@ -18,7 +18,7 @@ function onReport(msg: string): void {
 }
 
 export class MockDataNestedPromisesServicePage extends Component<Props, State> {
-	private _mockDataNestedPromisesService = new MockDataNestedPromisesService(onReport);
+	private readonly _mockDataNestedPromisesService = new MockDataNestedPromisesService(onReport);
 
 	constructor(props: Props) {
 		super(props);
@@ -41,10 +41,6 @@ export class MockDataNestedPromisesServicePage extends Component<Props, State> {
 		});
 	}
 
-	private onFormat2(): void {
-		eval('console.log("hello from eval");');
-	}
-
 	public override render(): JSX.Element {
 		const titleStyle: TextStyle = {
 			textAlign: 'center',
@@ -55,7 +51,7 @@ export class MockDataNestedPromisesServicePage extends Component<Props, State> {
 			<View>
 				<Text style={titleStyle}>Mock Data with Nested Promises</Text>
 				<Button
-					disabled={!(this.props.onGoBack instanceof Function)}
+					disabled={typeof this.props.onGoBack !== 'function'}
 					title='Main Screen'
 					onPress={() => {
 						this.props.onGoBack?.();
@@ -64,7 +60,6 @@ export class MockDataNestedPromisesServicePage extends Component<Props, State> {
 				<Button title='Get 1K Object Cells' onPress={() => this.onGet1kObjectCells()} />
 				<Button title='Get 10K Object Cells' onPress={() => this.onGet10kObjectCells()} />
 				<Button title='Format' onPress={() => this.onFormat()} />
-				<Button title='Format2' onPress={() => this.onFormat2()} />
 				<FlatList
 					data={this._mockDataNestedPromisesService.objectCells}
 					renderItem={ObjectCellView.renderItem}

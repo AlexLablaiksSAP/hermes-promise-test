@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { type JSX, PureComponent } from 'react';
 import { Text, View, ViewStyle } from 'react-native';
 
 import { IObjectCell } from './hermes-promise-cli/src/IObjectCell';
@@ -8,7 +8,7 @@ export interface IObjectCellViewProps {
 }
 
 export class ObjectCellView extends PureComponent<IObjectCellViewProps> {
-	static viewStyle: ViewStyle = { padding: 10 };
+	static readonly viewStyle: ViewStyle = { padding: 10 };
 
 	public static renderItem(obj: IObjectCellViewProps): JSX.Element {
 		return <ObjectCellView {...obj} />;

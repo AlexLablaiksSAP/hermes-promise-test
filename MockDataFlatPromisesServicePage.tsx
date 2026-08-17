@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { type JSX, Component } from 'react';
 import { Alert, Button, FlatList, Text, TextStyle, View } from 'react-native';
 
 import { type IObjectCell } from './hermes-promise-cli/src/IObjectCell';
@@ -18,7 +18,9 @@ function onReport(msg: string): void {
 }
 
 export class MockDataFlatPromisesServicePage extends Component<Props, State> {
-	private _mockDataFlatPromisesService: MockDataFlatPromisesService = new MockDataFlatPromisesService(onReport);
+	private readonly _mockDataFlatPromisesService: MockDataFlatPromisesService = new MockDataFlatPromisesService(
+		onReport
+	);
 
 	constructor(props: Props) {
 		super(props);
@@ -51,7 +53,7 @@ export class MockDataFlatPromisesServicePage extends Component<Props, State> {
 			<View>
 				<Text style={titleStyle}>Mock Data with Flat Promises</Text>
 				<Button
-					disabled={!(this.props.onGoBack instanceof Function)}
+					disabled={typeof this.props.onGoBack !== 'function'}
 					title='Main Screen'
 					onPress={() => {
 						if (this.props.onGoBack) this.props.onGoBack();
